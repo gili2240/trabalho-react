@@ -1,18 +1,19 @@
 import { TextField, Button, Box, Typography, Stack } from '@mui/material';
 import { useState } from 'react';
-import { saveUser } from '../utils/storage';
+import { saveUser } from '../utils/storage'; // Função que salva no localStorage
 
-function Cadastro() {
+function Cadastro() { 
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
   const [cpf, setCpf] = useState('');
 
+  // Função chamada ao enviar o formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newUser = { nome, email, telefone, cpf };
-    saveUser(newUser);
-    setNome('');
+    const newUser = { nome, email, telefone, cpf }; // Monta um objeto com os dados que foram cadastradpos 
+    saveUser(newUser); // aqui ele salva o objeto, no caso o novo usuario no local storage
+    setNome(''); // Daqui pra baixo é para zerar as informações de cadastro após salvar
     setEmail('');
     setTelefone('');
     setCpf('');
