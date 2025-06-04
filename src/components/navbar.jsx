@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Função que permite navegar entre páginas
 
   return (
     <AppBar position="static">
@@ -13,7 +13,7 @@ function Navbar() {
         <Button color="inherit" onClick={() => navigate('/usuarios')}>
           Usuários Cadastrados
         </Button>
-      </Toolbar>
+      </Toolbar> 
     </AppBar>
   );
 }
