@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { getUsers, deleteUser } from '../utils/storage';
 
 function Usuarios() {
-  const [usuarios, setUsuarios] = useState([]);
+  const [usuarios, setUsuarios] = useState([]); // Estado que guarda os usuários
 
   useEffect(() => {
     setUsuarios(getUsers());
@@ -30,7 +30,6 @@ function Usuarios() {
               <TableCell>Email</TableCell>
               <TableCell>Telefone</TableCell>
               <TableCell>CPF</TableCell>
-              <TableCell>Ações</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -40,15 +39,6 @@ function Usuarios() {
                 <TableCell>{user.email}</TableCell>
                 <TableCell>{user.telefone}</TableCell>
                 <TableCell>{user.cpf}</TableCell>
-                <TableCell>
-                  <Button
-                    variant="outlined"
-                    color="error"
-                    onClick={() => handleDelete(index)}
-                  >
-                    Excluir
-                  </Button>
-                </TableCell>
               </TableRow>
             ))}
           </TableBody>
