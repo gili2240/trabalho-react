@@ -1,3 +1,4 @@
+// Lista os usuarios cadastrados.
 import { Box, Typography, Table, TableHead, TableRow, TableCell, TableBody, Button } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { getUsers, deleteUser } from '../utils/storage';
