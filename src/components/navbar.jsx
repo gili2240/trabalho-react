@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-function form() {
+function Navbar() {
   const navigate = useNavigate();
 
   return (
@@ -18,4 +18,4 @@ function form() {
   );
 }
 
-export default form;
+export default Navbar;
