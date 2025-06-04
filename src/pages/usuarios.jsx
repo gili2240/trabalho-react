@@ -10,10 +10,6 @@ function Usuarios() {
     setUsuarios(getUsers());
   }, []);
 
-  const handleDelete = (index) => {
-    deleteUser(index);
-    setUsuarios(getUsers());
-  };
 
   return (
     <Box>
